@@ -1,0 +1,22 @@
+/* #Footer */
+.site-footer {
+	background-color: $footer_bg;
+}
+.footer-area-wrap {
+	background-color: $footer_widgets_bg;
+}
+.footer-copyright {
+	color: $regular_h6_color;
+}
+
+.invert .footer-copyright {
+	color: $invert_text_color;
+}
+
+.footer-container.invert .social-list a{
+	color: $invert_link_hover_color;
+}
+
+.footer-container.invert .social-list a:hover{
+	color: $invert_link_color;
+}

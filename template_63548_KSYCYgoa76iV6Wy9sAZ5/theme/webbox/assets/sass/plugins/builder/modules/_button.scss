@@ -1,0 +1,66 @@
+#tm_builder_outer_content {
+
+	.tm_pb_module,
+	.tm_pb_module.tm_pb_promo {
+		.tm_pb_button {
+			text-decoration: none;
+			@include btn;
+
+			&:before {
+				content: none;
+			}
+
+			&:after {
+				@include font-size(.875);
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&:hover {
+				text-decoration: none;
+				padding: $button__indents !important;
+			}
+			&:active {
+				outline: 0;
+			}
+
+			&.tm_pb_custom_button_icon {
+				&.tm_pb_icon_right,
+				&.tm_pb_icon_left{
+					padding: $button__indents;
+					&:hover {
+						padding: $button__indents;
+					}
+				}
+
+				&.tm_pb_icon_left:after{
+					left: $button__indents_x/2;
+				}
+				&.sign_in_button {
+					min-width: 255px;
+					border-radius: 4px;
+					border: none;
+					text-transform: none;
+					font-weight: 300;
+					@include media-breakpoint-up(xl) {
+						min-width: 340px;
+					}
+					&.tm_pb_icon_right,
+					&.tm_pb_icon_left{
+						padding: 22px 50px 22px 63px;
+						@include media-breakpoint-up(xl) {
+							padding: $button__indents-with-icon ;
+						}
+						&:hover {
+							padding: 22px 50px 22px 63px !important;
+							@include media-breakpoint-up(xl) {
+								padding: $button__indents-with-icon !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
